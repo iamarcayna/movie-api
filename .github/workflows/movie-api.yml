@@ -21,6 +21,11 @@ jobs:
 
       - name: Build with Maven
         run: mvn clean package
+        env:
+          'MONGO_DATABASE': 'movie-api-db'
+          'MONGO_USER': 'iamarcayna'
+          'MONGO_PASSWORD': 'oESmJDE1UjuKZ2z3'
+          'MONGO_CLUSTER': 'cluster0.kqcmngj.mongodb.net'
 
       - name: Run Java Application
         run: java -jar movie-api-0.0.1-SNAPSHOT.jar
